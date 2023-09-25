@@ -9,12 +9,15 @@
     "@wdio/local-runner": "^8.16.11",
     "@wdio/spec-reporter": "^8.16.9",
     "appium": "^2.0.1",
-    "appium-uiautomator2-driver": "^2.29.9",
+    "appium-uiautomator2-driver": "^2.29.10",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2",
     "wdio-appium-service": "^0.2.3"
   },
   "scripts": {
+    "test": "wdio run ./wdio.conf.ts",
+    "kill": "sudo kill -9 $(sudo lsof -t -i:4723) & adb devices | grep emulator | cut -f1 | while read line; do adb -s $line emu kill; done",
+    "server":"emulator -avd 4wdio & appium",
     "wdio": "emulator -avd 4wdio & appium & wdio run ./wdio.conf.ts"
   },
   "dependencies": {
