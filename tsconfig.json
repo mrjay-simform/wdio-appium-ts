@@ -18,9 +18,12 @@
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+        "outDir": "./dist",
+        "sourceMap": true
     },
     "include": [
         "test"
-    ]
+        ,"test/**/*.ts"
+, "test/pageobjects/login.page.ts"    ]
 }
