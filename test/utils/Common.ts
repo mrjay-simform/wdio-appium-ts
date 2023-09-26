@@ -68,6 +68,15 @@ class Common {
         await driver.touchAction([{ action: 'longPress', x: x, y: starty }, { action: 'moveTo', x: x, y: endy }, 'release']);
     }
 
+
+    async waitForElementToDisplayed(element: WebdriverIO.Element, timeout = 20000) {
+        await element.waitForDisplayed({ timeout });
+    }
+    async waitForElementAndClick(element: WebdriverIO.Element, timeout = 20000) {
+        await element.waitForDisplayed({ timeout });
+        await element.click();
+    }
+
 }
 
 export default new Common();

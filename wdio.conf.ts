@@ -31,7 +31,8 @@ export const config: Options.Testrunner = {
         'appium:automationName': 'UiAutomator2',
         'appium:appPackage': 'com.wdiodemoapp',
         'appium:appWaitActivity': 'com.wdiodemoapp.MainActivity',
-        'appium:app': '/home/jay/Documents/Freetrade/wdio-appium-ts/app/android/NativeDemoApp.apk'
+        'appium:app': '/home/jay/Documents/Freetrade/wdio-appium-ts/app/android/NativeDemoApp.apk',
+        "appium:noReset": true
     }],
 
     logLevel: 'info',
